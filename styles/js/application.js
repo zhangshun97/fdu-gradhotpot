@@ -44,14 +44,15 @@
       $(this).attr('data-content', content);
 
       // Keep popovers open when hovered
-      $(this).popover({
-        trigger: 'manual',
-        container: 'body',
-        placement: 'left',
-        template: '<div class="popover popover-source"> <div class="arrow"></div> <div class="popover-inner"> <h3 class="popover-title"></h3> <div class="popover-content"> <p></p> </div> </div> </div>',
-        html: true,
-        delay: {show: 50, hide: 750}
-      }).on('mouseenter', function () {
+      // $(this).popover({
+      //   trigger: 'manual',
+      //   container: 'body',
+      //   placement: 'left',
+      //   template: '<div class="popover popover-source"> <div class="arrow"></div> <div class="popover-inner"> <h3 class="popover-title"></h3> <div class="popover-content"> <p></p> </div> </div> </div>',
+      //   html: true,
+      //   delay: {show: 50, hide: 750}
+      // }).on('mouseenter', function () {
+      $(this).on('mouseenter', function () {
         var self = this;
         $(this).popover('show');
         $(this).addClass('active');
